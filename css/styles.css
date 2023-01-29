@@ -15,6 +15,8 @@
     --accent-color: #4D5AE5;
     --white-color: #FFFFFF;
     --active-color: #404BBF;
+    --icon-color: #8E8F99;
+    --social-color: #31D0AA;
 }
 
 /* =================RESET=================== */
@@ -98,6 +100,9 @@ img {
 /* ==================HEADER==================== */
 
 .header {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     /* padding-top: 24px;
     padding-bottom: 24px; */
     border-bottom: 1px solid var(--cornflower-bg-color);
@@ -176,6 +181,17 @@ color: var(--active-color);
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1440px;
+    background-color: var(--dark-bg-color);
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(../images/bg.jpg);
+    background-size: cover;
 }
 
 .hero-title {
@@ -241,6 +257,19 @@ color: var(--active-color);
 .features-list-item {
     width: 264px;
 }
+
+.features-card {
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    padding: 24px 100px;
+    background: var(--light-bg-color);
+    border-radius: 4px;
+}
+
+.features-icon {
+
+}
 /* ==================/FEATURES==================== */
 
 /* ==================WORK==================== */
@@ -274,6 +303,9 @@ color: var(--active-color);
 /* ==================TEAM==================== */
 
 .team {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--light-bg-color);
 }
 
@@ -309,6 +341,7 @@ color: var(--active-color);
 }
 
 .team-item {
+    margin-bottom: 8px;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
@@ -317,6 +350,8 @@ color: var(--active-color);
 
 .team-card {
     background: var(--white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-card-text {
@@ -326,7 +361,90 @@ color: var(--active-color);
     padding-right: 16px;
 }
 
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent-color)
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: var(--active-color);
+}
+
+.social-icon {
+    fill: var(--light-text-color);
+}
+
 /* ==================/TEAM==================== */
+
+/* ===================CUSTOMERS================ */
+
+.customers {
+    padding-top: 130px;
+}
+
+.customers-title {
+    margin-bottom: 72px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--primary-text-color);
+}
+
+.customers-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.client-card {
+    width: 168px;
+    height: 88px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+}
+
+.client-card:hover,
+.client-card:focus {
+    border: 1px solid var(--active-color);
+}
+
+.client-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.client-link:hover > .client-icon,
+.client-link:focus > .client-icon {
+    fill: var(--active-color);
+}
+
+
+.client-icon {
+    fill: var(--icon-color);
+}
+
+
+/* ===================/CUSTOMERS================ */
 
 /* ===================PROJECTS================ */
 
@@ -360,6 +478,14 @@ color: var(--active-color);
     cursor: pointer;
 }
 
+.filters-btn:hover,
+.filters-btn:focus {
+    color: var(--white-color);
+    background: var(--active-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
 .filters-list .active {
     color: var(--white-color);
     background-color: var(--active-color);
@@ -367,6 +493,12 @@ color: var(--active-color);
 
 .card {
     background: var(--white-color);
+}
+
+.card:hover,
+.card:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px
+     rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-title {
@@ -389,7 +521,7 @@ color: var(--active-color);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 48px 24px;
     flex-basis: calc((100% - 48px) / 3);
 }
 
@@ -408,6 +540,9 @@ color: var(--active-color);
 .footer {
     padding-top: 100px;
     padding-bottom: 100px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer .logo {
@@ -429,5 +564,32 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--cornflower-text-color);
 }
+
+.footer-list {
+    display: flex;
+    gap: 120px;
+}
+
+.social-title {
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+}
+
+.footer .social-list-link {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-list-link:hover,
+.footer .social-list-link:focus {
+    background-color: var(--social-color);
+}
+
+
+
 
 /* ==================/FOOTER==================== */
